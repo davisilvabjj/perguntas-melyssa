@@ -57,12 +57,16 @@ button:hover {
 }
 
 /* Foto final */
+
 .foto-final {
-    width: 100%;
-    max-width: 300px;
+    width: 90%; /* Ajusta a largura da imagem para até 90% do container */
+    max-width: 300px; /* Define um tamanho máximo */
+    height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px;
     margin-top: 20px;
+    object-fit: contain; /* Evita cortes indesejados */
 }
+
 
 /* Fogos de artifício */
 .fireworks {
