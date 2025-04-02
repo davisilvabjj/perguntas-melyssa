@@ -1,0 +1,113 @@
+/* Reset básico */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Fundo e layout */
+body {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Caixa principal */
+.container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #f1c40f;
+}
+
+/* Tela final */
+#final {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Foto final */
+.foto-final {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Fogos de artifício */
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif') no-repeat center center;
+    background-size: cover;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s, visibility 1s;
+}
+
+.fireworks.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .foto-final {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 500px;
+        padding: 25px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
